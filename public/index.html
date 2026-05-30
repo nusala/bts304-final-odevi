@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Optik Otomasyon Yönetim Paneli - Müşteri, Doktor, Ürün, Personel, Reçete ve Satış yönetimi için modern ve güçlü bir platform.">
+    <title>Optik Otomasyon Yönetim Paneli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">👁️</div>
+            <h1 class="brand-title">Optik<span>Otomasyon</span></h1>
+            <p class="brand-subtitle">Yönetim Paneli</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-page="dashboard" onclick="showPage('dashboard')">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-page="musteri" onclick="showPage('musteri')">
+                <span class="nav-icon">👥</span>
+                <span class="nav-text">Müşteriler</span>
+            </a>
+            <a href="#" class="nav-item" data-page="doktor" onclick="showPage('doktor')">
+                <span class="nav-icon">🩺</span>
+                <span class="nav-text">Doktorlar</span>
+            </a>
+            <a href="#" class="nav-item" data-page="urun" onclick="showPage('urun')">
+                <span class="nav-icon">🛍️</span>
+                <span class="nav-text">Ürünler</span>
+            </a>
+            <a href="#" class="nav-item" data-page="personel" onclick="showPage('personel')">
+                <span class="nav-icon">👔</span>
+                <span class="nav-text">Personel</span>
+            </a>
+            <a href="#" class="nav-item" data-page="recete" onclick="showPage('recete')">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Reçeteler</span>
+            </a>
+            <a href="#" class="nav-item" data-page="satis" onclick="showPage('satis')">
+                <span class="nav-icon">💰</span>
+                <span class="nav-text">Satışlar</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="sidebar-footer-text">© 2026 Optik Otomasyon</div>
+        </div>
+    </aside>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent">
+        <!-- Dynamic content loads here -->
+    </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay" style="display:none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Form</h2>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic form content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- JavaScript Files -->
+    <script src="js/app.js"></script>
+    <script src="js/musteri.js"></script>
+    <script src="js/doktor.js"></script>
+    <script src="js/urun.js"></script>
+    <script src="js/personel.js"></script>
+    <script src="js/recete.js"></script>
+    <script src="js/satis.js"></script>
+</body>
+</html>
